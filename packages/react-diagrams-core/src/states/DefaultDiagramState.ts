@@ -5,7 +5,7 @@ import {
 	Action,
 	InputType,
 	ActionEvent,
-	DragCanvasState
+	//DragCanvasState
 } from '@projectstorm/react-canvas-core';
 import { PortModel } from '../entities/port/PortModel';
 import { DragNewLinkState } from './DragNewLinkState';
@@ -13,7 +13,7 @@ import { DiagramEngine } from '../DiagramEngine';
 import { DragDiagramItemsState } from './DragDiagramItemsState';
 
 export class DefaultDiagramState extends State<DiagramEngine> {
-	dragCanvas: DragCanvasState;
+	//dragCanvas: DragCanvasState;
 	dragNewLink: DragNewLinkState;
 	dragItems: DragDiagramItemsState;
 
@@ -22,7 +22,7 @@ export class DefaultDiagramState extends State<DiagramEngine> {
 			name: 'default-diagrams'
 		});
 		this.childStates = [new SelectingState()];
-		this.dragCanvas = new DragCanvasState();
+		//this.dragCanvas = new DragCanvasState();
 		this.dragNewLink = new DragNewLinkState();
 		this.dragItems = new DragDiagramItemsState();
 
@@ -35,7 +35,7 @@ export class DefaultDiagramState extends State<DiagramEngine> {
 
 					// the canvas was clicked on, transition to the dragging canvas state
 					if (!element) {
-						this.transitionWithEvent(this.dragCanvas, event);
+						//this.transitionWithEvent(this.dragCanvas, event);
 					}
 					// initiate dragging a new link
 					else if (element instanceof PortModel) {
